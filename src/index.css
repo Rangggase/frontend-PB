@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  --color-paper: #faf9f6;
+  --color-paper-dim: #f2f0ea;
+  --color-ink: #1c2321;
+  --color-ink-muted: #6b6558;
+  --color-ink-soft: #8c8577;
+  --color-rule: #dbd7cb;
+  --color-rule-strong: #b9b4a3;
+
+  --color-accent: #2f5233;
+  --color-accent-dim: #24401f;
+  --color-accent-soft: #e7ede3;
+
+  --color-fake: #b3261e;
+  --color-fake-soft: #f7e6e4;
+  --color-real: #1f6f54;
+  --color-real-soft: #e3efe9;
+  --color-warn: #92621a;
+  --color-warn-soft: #f4ead4;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Fokus keyboard tetap terlihat jelas, hanya bentuknya disesuaikan tema */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
