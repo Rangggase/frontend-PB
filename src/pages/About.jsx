@@ -1,4 +1,6 @@
 import React from 'react';
+// Import komponen Footer dari folder components
+import Footer from '../components/Footer'; 
 
 const METRICS = {
   textOnly: '±64%',
@@ -7,51 +9,8 @@ const METRICS = {
   tokens: '±126',
 };
 
-// 1. Buat Komponen Footer (Bisa dipisah ke file komponen tersendiri nantinya)
-function Footer() {
-  return (
-    <footer className="border-t border-zinc-200 bg-white mt-auto">
-      <div className="max-w-5xl mx-auto px-6 lg:px-12 py-10 lg:py-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          
-          {/* Bagian Kiri: Logo & Info Kampus */}
-          <div className="flex items-center gap-4">
-            {/* Menggunakan URL Logo Resmi UNESA dari Wikimedia (resolusi tinggi & transparan) */}
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_UNESA_%28Universitas_Negeri_Surabaya%29.png" 
-              alt="Logo Universitas Negeri Surabaya" 
-              className="w-12 h-12 object-contain"
-            />
-            <div>
-              <h3 className="font-serif font-bold text-zinc-900 text-lg">Fake News Checker</h3>
-              <p className="text-sm text-zinc-500 font-medium">Tugas Kampus • Universitas Negeri Surabaya</p>
-            </div>
-          </div>
-
-          {/* Bagian Kanan: Tautan Opsional */}
-          <div className="flex gap-6 text-sm font-medium text-zinc-500">
-            <a href="#" className="hover:text-zinc-900 transition-colors">Beranda</a>
-            <a href="#" className="hover:text-zinc-900 transition-colors">Dashboard</a>
-            <a href="#" className="hover:text-zinc-900 transition-colors">Tentang</a>
-          </div>
-        </div>
-
-        {/* Garis Pemisah & Copyright */}
-        <hr className="border-zinc-100 my-8" />
-        
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-400">
-          <p>&copy; {new Date().getFullYear()} Tim Front-End & Back-End. Hak cipta dilindungi.</p>
-          <p>Didesain dengan <span className="text-zinc-300">♥</span> untuk keperluan akademis.</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-// 2. Halaman Utama About
 export default function About() {
   return (
-    /* Wrapper Utama: flex-col dan min-h-screen memastikan footer selalu di bawah */
     <div className="min-h-screen flex flex-col bg-white selection:bg-zinc-200">
       
       <main className="flex-grow max-w-5xl w-full mx-auto px-6 lg:px-12 py-20">
@@ -145,7 +104,7 @@ export default function About() {
         </div>
       </main>
 
-      {/* 3. Render Footer di Paling Bawah */}
+      {/* Render komponen Footer Global */}
       <Footer />
       
     </div>
